@@ -30,7 +30,6 @@ under the License.
     <artifactId>paimon-trino-393</artifactId>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <target.java.version>17</target.java.version>
         <jdk.test.version>17</jdk.test.version>
         <trino.version>393</trino.version>
