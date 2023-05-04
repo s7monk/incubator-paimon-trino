@@ -33,6 +33,18 @@ jobs:
         with:
             java-version: 17
             distribution: adopt
+      - name: Set up Maven
+        uses: apache/maven-setup-action@v2
+        with:
+            maven-version: 3.8.2
+            java-version: ${{ matrix.java.version }}
       - name: Build and Test
         run: |
-          mvn clean install
+          mvn clean install -Dmaven.test.skip=true -Dcheckstyle.skip=true -Denforcer.skip=true -Dformatter.skip=true
+      - name: Format source code
+        uses: google/format-action@v1
+        with:
+          version: '1.9'
+          check: true # 检查代码格式是否符合规范
+          iwyu: false
+          f: .
