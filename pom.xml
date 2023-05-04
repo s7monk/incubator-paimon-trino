@@ -164,6 +164,17 @@ under the License.
         </dependency>
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>skip-paimon-trino-393</id>
+            <modules>
+                <module>paimon-trino-358</module>
+                <module>paimon-trino-385</module>
+                <module>paimon-trino-388</module>
+            </modules>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <plugin>
