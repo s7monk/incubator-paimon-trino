@@ -30,4 +30,4 @@ jobs:
           java-version: 11
       - name: Build
         run: |
-          mvn clean install -Dskip.paimon-trino-393
+          mvn clean install -pl paimon-trino-358,paimon-trino-385,paimon-trino-388
