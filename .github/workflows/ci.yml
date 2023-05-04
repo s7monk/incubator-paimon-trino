@@ -33,11 +33,6 @@ jobs:
         with:
             java-version: 17
             distribution: adopt
-      - name: Set up Maven
-        uses: apache/maven-setup-action@v2
-        with:
-            maven-version: 3.8.2
-            java-version: ${{ matrix.java.version }}
       - name: Build and Test
         run: |
           mvn clean install -Dmaven.test.skip=true -Dcheckstyle.skip=true -Denforcer.skip=true -Dformatter.skip=true
