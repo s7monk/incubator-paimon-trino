@@ -42,9 +42,5 @@ jobs:
         run: |
           mvn clean install -Dmaven.test.skip=true -Dcheckstyle.skip=true -Denforcer.skip=true -Dformatter.skip=true
       - name: Format source code
-        uses: google/format-action@v1
-        with:
-          version: '1.9'
-          check: true # 检查代码格式是否符合规范
-          iwyu: false
-          f: .
+        run: |
+            mvn spotless:apply
