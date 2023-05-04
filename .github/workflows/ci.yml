@@ -31,3 +31,6 @@ jobs:
       - name: Build
         run: |
           mvn clean install
+      - name: Build module paimon-trino-393 with JDK 17
+        run: |
+          mvn clean install -Pjdk17
